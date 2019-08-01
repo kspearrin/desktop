@@ -13,7 +13,7 @@
   "homepage": "https://bitwarden.com",
   "repository": {
     "type": "git",
-    "url": "https://github.com/bitwarden/desktop"
+    "url": "https://github.com/kspearrin/desktop"
   },
   "license": "GPL-3.0",
   "scripts": {
@@ -53,15 +53,9 @@
       "output": "dist",
       "app": "build"
     },
-    "afterSign": "scripts/notarize.js",
     "mac": {
       "electronUpdaterCompatibility": ">=0.0.1",
       "category": "public.app-category.productivity",
-      "darkModeSupport": true,
-      "gatekeeperAssess": false,
-      "hardenedRuntime": true,
-      "entitlements": "resources/entitlements.mac.plist",
-      "entitlementsInherit": "resources/entitlements.mac.plist",
       "extendInfo": {
         "ITSAppUsesNonExemptEncryption": false,
         "CFBundleLocalizations": [
@@ -96,8 +90,6 @@
         "CFBundleDevelopmentRegion": "en"
       },
       "target": [
-        "mas-dev",
-        "mas",
         "dmg",
         "zip"
       ]
